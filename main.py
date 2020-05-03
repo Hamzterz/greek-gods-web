@@ -6,7 +6,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("index.html")
+    str_wiki_desc = str_get_wiki_summary(str_search="Twelve_Olympians")
+    return render_template("index.html", wiki_desc=str_wiki_desc)
 
 
 @app.route('/<greek_god>')
