@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        img.logo {
+            height: 15%;
+            width: 15%;
+        }
+
+        .navbar-custom {
+            background:#D4AF37;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+    crossorigin="anonymous">
+    <title>
+        {% block title %}{% endblock %}
+    </title>
+<!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-expand-lg navbar-dark static-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <div class="col"></div>
+            <img class="logo" src="/static/other/parthenon.png" alt="">
+            </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+                    <span class="sr-only">(current)</span>
+                </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+            </li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+    <!-- Page Content -->
+    <div class="container">
+        <p>{% block body %}{% endblock %}</p>
+        </div>
+        <!-- /.container -->
+</head>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

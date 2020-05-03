@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title%}Profile:{{greek_god}}{% endblock %}
+{% block body%}Profile{% endblock %}
+{% block content%}
+<!doctype html>
+<div class="container">
+    <body>
+        <h1>{{greek_god}}</h1>
+        <p>{{greek_god}}. Below will display more information about {{greek_god}} using an API to return text.</p>
+        <a href="#" class="d-block mb-4 h-100">
+            <img class="img-fluid img-thumbnail" src="/static/greek_gods/{{greek_god}}.jpg" alt="">
+          </a>
+    </body>
+</div>
+{% endblock %}
